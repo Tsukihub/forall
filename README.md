@@ -1,6 +1,6 @@
 # forall
 
-forall : Projet Cookie click
+Projet Cookie click
 ============================
 
 Création du projet sur gitHub
