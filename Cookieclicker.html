@@ -3,15 +3,16 @@
 
   <head>
     <meta charset="utf-8">
-    <title>cookie clicker</title>
+    <title>KUKI clicker</title>
     <link rel="stylesheet" href="cookie.css">
+    <link rel="shortcut icon" href="bird.ico" type="image/x-icon">
     </head>
     <body>
-    <img src="c.png"  onClick="scoreadd()" alt="imagecookie" width="200px"/>
+    <img id="cooki" src="c.png"  onClick="scoreadd()" alt="imagecookie" width="200px"/>
 	<img src="granny.jpg" onClick="grannyClick()">
 
-
 		<p>Score: <a id="clicks">0</a></p>
+  <input type="button" onclick="reset()" value="Reset"/>
 
 
    		<script type="text/javascript" src="js.js"></script>
