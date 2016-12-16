@@ -1,14 +1,38 @@
+var highscore = 0;
 var clicks = 0;
 var i = 1;
-      function reset(){
 
-clicks = 0;
-document.getElementById("clicks").innerHTML = clicks;
-   }
+
+function cookieCreate(scoreHaut) {
+  document.cookie ='highscore='+scoreHaut+'; expires=Sun, 28 Feb 2040 00:00:00 UTC';//fonction qui créée le cookie
+}
+function readCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  /*alert(ca);*///affiche tous les cookies
+  for(var i=0;i < ca.length;i++) {
+    var c = ca[i];
+    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+  }
+  return null;
+}// fonction qui lit le cookie
+
+if (readCookie("highscore")) {
+highscore = readCookie("highscore");// si cookie existe lire cookie
+// stcokage du cookie dans highscore
+alert(highscore);
+document.getElementById("high").innerHTML = highscore;}//affichage highscore dans le html 
+else{cookieCreate(highscore);}//sinon on appelle la fonction créer cookie
 
    function scoreadd() {
        clicks += i;
        document.getElementById("clicks").innerHTML = clicks;
+       if (highscore < clicks) {
+        highscore = clicks;
+        document.getElementById("high").innerHTML = clicks;
+        cookieCreate(highscore);//appelle  de la fonction créér cookie 
+      }
    }
 
    var granny = 0;
@@ -24,10 +48,11 @@ document.getElementById("clicks").innerHTML = clicks;
       }
    	}
 
-   function reset(){
+function reset(){
 
-clicks = 0;
 i = 1;
 granny = 0
+document.getElementById("clicks").innerHTML = clicks;
+clicks = 0;
 document.getElementById("clicks").innerHTML = clicks;
    }
