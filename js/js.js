@@ -47,6 +47,16 @@ else{cookieCreate(highscore);}//sinon on appelle la fonction créer cookie
        alert("Pas assez de points!");
       }
    	}
+     function ajout10() {
+      document.getElementById("clicks").innerHTML = clicks;
+      if (clicks >=100) {
+        i= i+ 10;
+        clicks -= 100;
+      }
+      else {
+        alert("Pas assez de points!");
+      }
+     }
 
 function reset(){
 
