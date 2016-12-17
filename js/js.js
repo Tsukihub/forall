@@ -44,9 +44,10 @@ else{cookieCreate(highscore);}//sinon on appelle la fonction créer cookie
         clicks -= 50;
       }
       else{
-       alert("Pas assez de points!");
+       alert("Pas assez de cookies!");
       }
    	}
+     
      function ajout10() {
       document.getElementById("clicks").innerHTML = clicks;
       if (clicks >=100) {
@@ -54,7 +55,7 @@ else{cookieCreate(highscore);}//sinon on appelle la fonction créer cookie
         clicks -= 100;
       }
       else {
-        alert("Pas assez de points!");
+        alert("Pas assez de cookies!");
       }
      }
 
