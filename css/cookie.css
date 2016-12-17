@@ -1,4 +1,40 @@
-img {margin-top: 40px;
+html {
+	margin:0;
+  	padding:0;
+	background: url("fond_cookie.jpg") no-repeat center fixed; 
+  	background-size: 100% 100%; 
 }
-body {text-align: center;}
-#multiplicateur {width: 100px;}
+
+#boutons {
+	width: 50px;
+	
+	position:absolute;
+	top: 130px;
+	right: 460px;
+}
+
+#cookie {
+	width: 250px;
+	position: absolute;
+	top : 120px;
+	left: 250px;
+}
+
+#reset {
+	width: 170px;
+	position: absolute;
+	bottom: 20px;
+	right: 40px;
+}
+
+#clicks {
+	position: absolute;
+	bottom: 90px;
+	left: 350px;
+}
+
+#high {
+	position: absolute;
+	bottom: 90px;
+	right: 415px;
+}
