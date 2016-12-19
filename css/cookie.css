@@ -1,39 +1,47 @@
 html {
-	margin:0;
+	margin:0; /*L'image colle bien aux bords de la page*/
   	padding:0;
-	background: url("fond_cookie.jpg") no-repeat center fixed; 
-  	background-size: 100% 100%; 
+	background: url("fond_cookie.jpg") no-repeat center fixed; /* L'image de fond du site*/
+  	background-size: 100% 100%; /* L'image prend toute la page*/
 }
 
 #boutons {
-	width: 50px;
-	
-	position:absolute;
-	top: 130px;
+	width: 50px; /*Taille des images*/
+	position:absolute; /*La position des boutons ne bouge pas*/
+	top: 130px;  /*position exacte sur la page*/
 	right: 460px;
 }
 
-#cookie {
+
+#cookie {     /*L'image du cookie*/
 	width: 250px;
 	position: absolute;
 	top : 120px;
 	left: 250px;
 }
 
-#reset {
+#cookie:active {  /*Animation cookie, il change de taille quand on clique dessus*/
+	width :245px;
+}
+
+#reset {      /*L'image du bouton reset*/
 	width: 170px;
 	position: absolute;
 	bottom: 20px;
 	right: 40px;
 }
 
-#clicks {
+#reset:active {  /*Animation bouton reset, il change de taille quand on clique dessus*/
+	width :165px;
+}
+
+#clicks {       /*Position d'affichage du score*/
 	position: absolute;
 	bottom: 90px;
 	left: 350px;
 }
 
-#high {
+#high {        /*Position d'affichage du Highscore*/
 	position: absolute;
 	bottom: 90px;
 	right: 415px;

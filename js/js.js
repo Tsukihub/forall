@@ -75,6 +75,7 @@ else{cookieCreate(highscore);}//sinon on appelle la fonction créer cookie
 }
 
 function reset(){
+
   clearInterval(nIntervId);
   nIntervId= null;
   granny = 0;
@@ -86,4 +87,14 @@ function reset(){
 
 function myFunction() {
     document.getElementById("clicksForm").reset();
+
+
+var nIntervId;
+var inhib = 0;
+function  autoclick() {if (clicks >=200 && inhib<1){
+ clicks -= 200;
+nIntervId = setInterval(scoreadd, 1000);
+inhib += 1;
+alert(inhib);
+}
 }
