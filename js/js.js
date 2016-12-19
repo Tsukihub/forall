@@ -1,7 +1,7 @@
 var highscore = 0;
 var clicks = 0;
 var i = 1;
-var z = 1;
+
 
 
 function cookieCreate(scoreHaut) {
@@ -85,16 +85,15 @@ function reset(){
 
  }
 
-function myFunction() {
-    document.getElementById("clicksForm").reset();
+
 
 
 var nIntervId;
 var inhib = 0;
-function  autoclick() {if (clicks >=200 && inhib<1){
+function  autoclick() {if (clicks >=200){
+if (nIntervId) return;
  clicks -= 200;
 nIntervId = setInterval(scoreadd, 1000);
-inhib += 1;
-alert(inhib);
+
 }
 }
