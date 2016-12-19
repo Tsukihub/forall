@@ -7,14 +7,16 @@
   </head>
   <body>
     <img src="image/cookie.png"  onClick="scoreadd()" alt="image cookie" id="cookie"/>
-	<div id="boutons">
+  <div id="boutons">
     <img src="image/bouton_grand_mere.jpg" alt="bouton multiplicateur +2" onClick="grannyClick()" id="multiplicateur" width="180px">
     <img src="image/bouton_elfe.jpg" alt="bouton multiplicateur +10" width="180px" onClick="ajout10()">
     <img src="image/bouton_pere_noel.jpg" alt="bouton auto-click" width="180px" onClick="autoclick()">
   </div>
-    <img src="image/bouton_reset.jpg" type="button" alt="bouton reset" id="reset" onclick="reset()" value="reset"/>
-		<p id="clicks">0</p>
-    <p id="high">0</p>
+    <img src="image/bouton_reset.jpg" type="button" alt="bouton reset" id="reset" onmousedown="reset()" onclick="reset()" value="reset"/>
+    <form id="clicksForm">
+    <p id="clicks"></p>
+    </form>
+    <p id="high"></p>
         <script type="text/javascript" src="js/js.js"></script>
   </body>
 </html>

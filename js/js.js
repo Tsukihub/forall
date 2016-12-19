@@ -1,6 +1,7 @@
 var highscore = 0;
 var clicks = 0;
 var i = 1;
+var z = 1;
 
 
 function cookieCreate(scoreHaut) {
@@ -36,22 +37,22 @@ else{cookieCreate(highscore);}//sinon on appelle la fonction créer cookie
    }
 
    var granny = 0;
-   	function grannyClick(){
-   		document.getElementById("clicks").innerHTML = clicks;
+    function grannyClick(){
+      document.getElementById("clicks").innerHTML = clicks;
       if (clicks >= 50) {
-        
         i = i + 1;
         clicks -= 50;
+        document.getElementById("clicks").value = clicks;
       }
       else{
        alert("Pas assez de cookies!");
       }
-   	}
+    }
      
      function ajout10() {
       document.getElementById("clicks").innerHTML = clicks;
       if (clicks >=100) {
-        i= i+ 10;
+        i= i + 10;
         clicks -= 100;
       }
       else {
@@ -59,13 +60,34 @@ else{cookieCreate(highscore);}//sinon on appelle la fonction créer cookie
       }
      }
 
+    var nIntervId;
+     function  autoclick() {
+      if (nIntervId) return;
+      if (clicks >= 200){
+          clicks -= 200;
+          nIntervId = setInterval(scoreadd, 1000);
+          clicks = clicks + 1;
+
+            }
+            else {
+              alert("Pas assez de cookies!");
+            }
+}
+
 function reset(){
-clearInterval(nIntervId);
-granny = 0
-document.getElementById("clicks").innerHTML = clicks;
-clicks = 0;
-document.getElementById("clicks").innerHTML = clicks;
+
+  clearInterval(nIntervId);
+  nIntervId= null;
+  granny = 0;
+  document.getElementById("clicks").innerHTML = clicks;
+  clicks = 0;
+  i = 1;
+
  }
+
+function myFunction() {
+    document.getElementById("clicksForm").reset();
+
 
 var nIntervId;
 var inhib = 0;
