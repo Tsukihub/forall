@@ -51,7 +51,7 @@ else{cookieCreate(highscore);}//sinon on appelle la fonction créer cookie
      
      function ajout10() {
       document.getElementById("clicks").innerHTML = clicks;
-      if (clicks >=10) {
+      if (clicks >=100) {
         i= i + 10;
         clicks -= 100;
       }
@@ -62,6 +62,7 @@ else{cookieCreate(highscore);}//sinon on appelle la fonction créer cookie
 
     var nIntervId;
      function  autoclick() {
+      if (nIntervId) return;
       if (clicks >= 200){
           clicks -= 200;
           nIntervId = setInterval(scoreadd, 1000);
@@ -75,6 +76,7 @@ else{cookieCreate(highscore);}//sinon on appelle la fonction créer cookie
 
 function reset(){
   clearInterval(nIntervId);
+  nIntervId= null;
   granny = 0;
   document.getElementById("clicks").innerHTML = clicks;
   clicks = 0;
